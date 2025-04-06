@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stock Market Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Stock Market Tracker</h1>
+      </header>
+
+      <div class="search-section">
+        <input
+          type="text"
+          id="stockSymbol"
+          placeholder="Enter Stock Symbol (e.g., AAPL)"
+        />
+        <select id="timePeriod">
+          <option value="daily">Daily</option>
+          <option value="weekly">Weekly</option>
+          <option value="monthly">Monthly</option>
+        </select>
+        <button id="searchButton">Search</button>
+      </div>
+
+      <div id="stockInfo" class="fade-in" style="display: none">
+        <div class="price-section">
+          <h2 id="companyName"></h2>
+          <div>
+            <span class="current-price" id="currentPrice"></span>
+            <span class="price-change" id="priceChange"></span>
+          </div>
+        </div>
+
+        <div class="stock-details">
+          <div class="detail-card company-overview">
+            <h3>Company Overview</h3>
+            <p id="companyDescription"></p>
+            <div class="company-extra-info">
+              <p><strong>Sector:</strong> <span id="companySector"></span></p>
+              <p>
+                <strong>Industry:</strong> <span id="companyIndustry"></span>
+              </p>
+            </div>
+          </div>
+          <div class="detail-card stock-stats">
+            <h3>Stock Statistics</h3>
+            <p><strong>Exchange:</strong> <span id="exchange"></span></p>
+            <p><strong>Market Cap:</strong> <span id="marketCap"></span></p>
+            <p><strong>PE Ratio:</strong> <span id="peRatio"></span></p>
+            <p>
+              <strong>Dividend Yield:</strong> <span id="dividendYield"></span>
+            </p>
+            <p><strong>52 Week High:</strong> <span id="weekHigh"></span></p>
+            <p><strong>52 Week Low:</strong> <span id="weekLow"></span></p>
+          </div>
+        </div>
+
+        <div class="chart-section">
+          <h3>Stock Price History</h3>
+          <canvas id="stockChart"></canvas>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
