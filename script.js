@@ -177,7 +177,7 @@ function createStockChart(historicalData, timePeriod) {
     if (stockChart) {
       stockChart.destroy();
     }
-
+    console.log("stockChart");
     // Create new chart
     const ctx = document.getElementById("stockChart").getContext("2d");
     stockChart = new Chart(ctx, {
